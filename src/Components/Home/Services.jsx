@@ -50,7 +50,7 @@ const Services = () => {
                           <div className="col-md-4">
                             <img
                               src={Cargo2}
-                              className="img-fluid rounded-start"
+                              className="img-fluid"
                               alt="car"
                             />
                           </div>
@@ -87,7 +87,7 @@ const Services = () => {
                           <div className="col-md-4">
                             <img
                               src={Cargo3}
-                              className="img-fluid rounded-start"
+                              className="img-fluid"
                               alt="car"
                             />
                           </div>
@@ -127,7 +127,7 @@ const Services = () => {
                           <div className="col-md-4">
                             <img
                               src={Cargo4}
-                              className="img-fluid rounded-start"
+                              className="img-fluid"
                               alt="car"
                             />
                           </div>
@@ -163,7 +163,7 @@ const Services = () => {
                           <div className="col-md-4">
                             <img
                               src={Cargo1}
-                              className="img-fluid rounded-start"
+                              className="img-fluid"
                               alt="car"
                             />
                           </div>

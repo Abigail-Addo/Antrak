@@ -2,7 +2,7 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-  Route
+  Route,
 } from "react-router-dom";
 import App from "../App";
 import Home from "../Pages/Home";
@@ -15,12 +15,12 @@ import Gallery from "../Pages/Gallery";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="services" element={<Services />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="faq" element={<FAQ />} />
-      <Route path="gallery" element={<Gallery />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/gallery" element={<Gallery />} />
     </Route>
   )
 );

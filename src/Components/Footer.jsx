@@ -1,4 +1,3 @@
-import Bio from "../assets/images/footer/footer-bio.jpg";
 import ImageOne from "../assets/images/footer/01.webp";
 import ImageTwo from "../assets/images/footer/02.webp";
 import ImageThree from "../assets/images/footer/03.webp";
@@ -14,6 +13,8 @@ import Instagram from "../assets/icons/instagram.svg";
 import Twitter from "../assets/icons/twitter-x.svg";
 import { NavLink } from "react-bootstrap";
 
+import Logo from "../assets/icons/logo-transparent-svg.svg";
+
 const Footer = () => {
   return (
     <>
@@ -22,24 +23,15 @@ const Footer = () => {
           <div className="py-5">
             <div className="row h-100">
               <div className="col-xl-4 pb-4">
-                <h3 className="flex-wrap text-break d-flex align-items-center">
-                  Antrak Exports LLC
-                </h3>
+                <div className="w-50">
+                  <img src={Logo} alt="logo" />
+                </div>
                 <p>
                   At Antrak Export LLC, we are passionate about connecting you
                   to the world. We are a full-service export company dedicated
                   to simplifying international shipping for businesses and
                   individuals alike.
                 </p>
-                <div className="d-flex pb-3">
-                  <div>
-                    <img src={Bio} alt="Manager" />
-                  </div>
-                  <div className="mx-2">
-                    <p className="py-0 my-0">Salia Mohammed</p>
-                    <p className="py-0 my-0">Manager</p>
-                  </div>
-                </div>
                 <div className="h-100 w-100 social-container">
                   <p className="py-0 my-0 font-italic">Follow us on</p>
                   <Link to="/">

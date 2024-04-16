@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const slideInVariants = {
-    hidden: { y: 100 },
+    hidden: { y: 50 },
     visible: { y: 0 },
   };
 
@@ -15,22 +15,22 @@ const About = () => {
       <section className="about-us">
         <div className="container wrapper">
           <div className="pt-5">
-            <div className="row">
-              <div className="col-lg-4 col-xs-12 pb-5">
-                <InView triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      exit={{ y: 100 }}
-                      variants={slideInVariants}
-                      transition={{
-                        duration: 2,
-                        type: "fade",
-                        stiffness: 50,
-                      }}
-                    >
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <motion.div
+                  ref={ref}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  exit={{ y: 50 }}
+                  variants={slideInVariants}
+                  transition={{
+                    duration: 2,
+                    type: "fade",
+                    stiffness: 50,
+                  }}
+                >
+                  <div className="row">
+                    <div className="col-lg-4 col-xs-12 pb-5">
                       <div className="card w-100 h-100 bg-white border-0">
                         <div className="d-flex mx-sm-auto mx-md-auto">
                           <img
@@ -52,25 +52,8 @@ const About = () => {
                           service.
                         </p>
                       </div>
-                    </motion.div>
-                  )}
-                </InView>
-              </div>
-              <div className="col-lg-4 col-md-6 col-xs-12 pb-5">
-                <InView triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      exit={{ y: 100 }}
-                      variants={slideInVariants}
-                      transition={{
-                        duration: 2,
-                        type: "fade",
-                        stiffness: 50,
-                      }}
-                    >
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-xs-12 pb-5">
                       <div className="card w-100 h-100 border-0">
                         <div className="card-body">
                           <h5 className="card-title text-white">Our Vision</h5>
@@ -84,25 +67,8 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                    </motion.div>
-                  )}
-                </InView>
-              </div>
-              <div className="col-lg-4 col-md-6 col-xs-12 pb-5">
-                <InView triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      exit={{ y: 100 }}
-                      variants={slideInVariants}
-                      transition={{
-                        duration: 2,
-                        type: "fade",
-                        stiffness: 50,
-                      }}
-                    >
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-xs-12 pb-5">
                       <div className="card w-100 h-100 border-0">
                         <div className="card-body">
                           <h5 className="card-title text-white">Our Mission</h5>
@@ -114,11 +80,11 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                    </motion.div>
-                  )}
-                </InView>
-              </div>
-            </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </InView>
           </div>
         </div>
       </section>

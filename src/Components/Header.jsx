@@ -5,23 +5,27 @@ import Location from "../assets/icons/location.svg";
 import Email from "../assets/icons/email.svg";
 import Call from "../assets/icons/phone.svg";
 import { Link } from "react-router-dom";
+import Logo from "../assets/icons/logo-transparent-svg.svg";
 
 const Header = () => {
   return (
     <>
       <header className="justify-content-between">
         <div className="d-flex shape-wrapper">
-          <div className="trapezium text-white">
-            <h3 className="flex-wrap h-100 w-50 text-break mx-5 d-flex align-items-center">
-              Antrak Exports LLC
-            </h3>
+          <div className="trapezium">
+            <div className="ms-5">
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
+            </div>
           </div>
           <div className="line h-100 w-100"></div>
         </div>
 
         <div className="details d-flex align-items-center justify-content-evenly">
           <Link
-            to="/"
+            to="https://maps.app.goo.gl/XBwfnoHwdQVNLHac7"
+            target="_blank"
             className="w-25 d-flex justify-content-center align-items-center text-decoration-none"
           >
             <img src={Location} alt="location" className="icons" />
@@ -45,19 +49,16 @@ const Header = () => {
 
         <div className="d-flex shape-wrapper-rotate h-100">
           <div className="trapezium text-white">
-            <div className="h-100 w-50 text-break mx-5 d-flex align-items-center">
+            <div className="h-100 w-50 text-break ms-5 d-flex align-items-center">
               <Link to="/">
-              <img src={Instagram} alt="instagram" className="icon" />
+                <img src={Instagram} alt="instagram" className="icon" />
               </Link>
               <Link to="/">
-              <img src={Twitter} alt="twitter" className="icon" />
+                <img src={Twitter} alt="twitter" className="icon" />
               </Link>
               <Link to="/">
-              <img src={Facebook} alt="facebook" className="icon" />
+                <img src={Facebook} alt="facebook" className="icon" />
               </Link>
-             
-             
-          
             </div>
           </div>
           <div className="line h-100 w-100"></div>

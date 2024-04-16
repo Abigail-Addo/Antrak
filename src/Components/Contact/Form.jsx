@@ -3,15 +3,7 @@ import Email from "../../../smtp.js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { InView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-
 const Form = () => {
-  const slideInVariants = {
-    hidden: { y: 100 },
-    visible: { y: 0 },
-  };
-
   const {
     register,
     handleSubmit,
@@ -74,221 +66,123 @@ const Form = () => {
                   onSubmit={handleSubmit(onSubmit)}
                   className="d-flex flex-column w-100 h-100"
                 >
-                  <InView triggerOnce>
-                    {({ inView, ref }) => (
-                      <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        exit={{ y: 100 }}
-                        variants={slideInVariants}
-                        transition={{
-                          duration: 2,
-                          type: "fade",
-                          stiffness: 50,
-                        }}
-                      >
-                        <div className="form-control pt-4 d-flex flex-column border-0">
-                          <label htmlFor="fullName" className="fw-bold">
-                            Full Name
-                            <span className="text-danger px-1">&#42;</span>
-                          </label>
-                          <input
-                            type="text"
-                            id="fullName"
-                            className="border border-secondary px-3 py-2 rounded"
-                            autoComplete="off"
-                            placeholder="Enter your full name"
-                            {...register("fullName", { required: true })}
-                          />
-                          {errors.fullName && (
-                            <span className="text-danger">
-                              Please enter your full name
-                            </span>
-                          )}
-                        </div>
-                      </motion.div>
+                  <div className="form-control pt-4 d-flex flex-column border-0">
+                    <label htmlFor="fullName" className="fw-bold">
+                      Full Name
+                      <span className="text-danger px-1">&#42;</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      className="border border-secondary px-3 py-2 rounded"
+                      autoComplete="off"
+                      placeholder="Enter your full name"
+                      {...register("fullName", { required: true })}
+                    />
+                    {errors.fullName && (
+                      <span className="text-danger">
+                        Please enter your full name
+                      </span>
                     )}
-                  </InView>
-                  <InView triggerOnce>
-                    {({ inView, ref }) => (
-                      <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        exit={{ y: 100 }}
-                        variants={slideInVariants}
-                        transition={{
-                          duration: 2,
-                          type: "fade",
-                          stiffness: 50,
-                        }}
-                      >
-                        <div className="form-control pt-4 d-flex flex-column border-0">
-                          <label htmlFor="email" className="fw-bold">
-                            Email<span className="text-danger px-1">&#42;</span>
-                          </label>
-                          <input
-                            type="text"
-                            id="email"
-                            className="border border-secondary px-3 py-2 rounded"
-                            autoComplete="off"
-                            placeholder="eg: example@mail.com"
-                            {...register("email", {
-                              required: true,
-                              pattern: {
-                                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: "Invalid email",
-                              },
-                            })}
-                          />
-                          {errors.email && (
-                            <span className="text-danger">
-                              Please enter a valid email
-                            </span>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </InView>
-                  <InView triggerOnce>
-                    {({ inView, ref }) => (
-                      <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        exit={{ y: 100 }}
-                        variants={slideInVariants}
-                        transition={{
-                          duration: 2,
-                          type: "fade",
-                          stiffness: 50,
-                        }}
-                      >
-                        <div className="form-control pt-4 d-flex flex-column border-0">
-                          <label htmlFor="number" className="fw-bold">
-                            Number
-                            <span className="text-danger px-1">&#42;</span>
-                          </label>
-                          <input
-                            type="tel"
-                            id="number"
-                            className="border border-secondary px-3 py-2 rounded"
-                            autoComplete="off"
-                            placeholder="Enter your phone number"
-                            {...register("number", {
-                              required: true,
-                              pattern: {
-                                value: /^\d+$/,
-                                message: "Invalid phone number",
-                              },
-                            })}
-                          />
-                          {errors.number && (
-                            <span className="text-danger">
-                              Please enter a valid phone number
-                            </span>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </InView>
-                  <InView triggerOnce>
-                    {({ inView, ref }) => (
-                      <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        exit={{ y: 100 }}
-                        variants={slideInVariants}
-                        transition={{
-                          duration: 2,
-                          type: "fade",
-                          stiffness: 50,
-                        }}
-                      >
-                        <div className="form-control pt-4 d-flex flex-column border-0">
-                          <label htmlFor="subject" className="fw-bold">
-                            Subject
-                            <span className="text-danger px-1">&#42;</span>
-                          </label>
-                          <input
-                            type="text"
-                            id="subject"
-                            className="border border-secondary px-3 py-2 rounded"
-                            autoComplete="off"
-                            placeholder="Enter the subject"
-                            {...register("subject", { required: true })}
-                          />
-                          {errors.subject && (
-                            <span className="text-danger">
-                              Please enter a subject
-                            </span>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </InView>
-                  <InView triggerOnce>
-                    {({ inView, ref }) => (
-                      <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        exit={{ y: 100 }}
-                        variants={slideInVariants}
-                        transition={{
-                          duration: 2,
-                          type: "fade",
-                          stiffness: 50,
-                        }}
-                      >
-                        <div className="form-control pt-4 d-flex flex-column border-0">
-                          <label htmlFor="message" className="fw-bold">
-                            Message
-                            <span className="text-danger px-1">&#42;</span>
-                          </label>
-                          <textarea
-                            id="message"
-                            className="border border-secondary px-3 py-2 rounded"
-                            rows="10"
-                            cols="50"
-                            autoComplete="off"
-                            placeholder="Enter your message"
-                            {...register("message", { required: true })}
-                          />
-                          {errors.message && (
-                            <span className="text-danger">
-                              Please enter a message
-                            </span>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </InView>
+                  </div>
 
-                  <InView triggerOnce>
-                    {({ inView, ref }) => (
-                      <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        exit={{ y: 100 }}
-                        variants={slideInVariants}
-                        transition={{
-                          duration: 2,
-                          type: "fade",
-                          stiffness: 50,
-                        }}
-                      >
-                        <div className="form-control py-4 d-flex flex-column border-0">
-                          <button type="submit" className="form-button">
-                            Send Message
-                          </button>
-                        </div>
-                      </motion.div>
+                  <div className="form-control pt-4 d-flex flex-column border-0">
+                    <label htmlFor="email" className="fw-bold">
+                      Email<span className="text-danger px-1">&#42;</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="email"
+                      className="border border-secondary px-3 py-2 rounded"
+                      autoComplete="off"
+                      placeholder="eg: example@mail.com"
+                      {...register("email", {
+                        required: true,
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "Invalid email",
+                        },
+                      })}
+                    />
+                    {errors.email && (
+                      <span className="text-danger">
+                        Please enter a valid email
+                      </span>
                     )}
-                  </InView>
+                  </div>
+
+                  <div className="form-control pt-4 d-flex flex-column border-0">
+                    <label htmlFor="number" className="fw-bold">
+                      Number
+                      <span className="text-danger px-1">&#42;</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="number"
+                      className="border border-secondary px-3 py-2 rounded"
+                      autoComplete="off"
+                      placeholder="Enter your phone number"
+                      {...register("number", {
+                        required: true,
+                        pattern: {
+                          value: /^\d+$/,
+                          message: "Invalid phone number",
+                        },
+                      })}
+                    />
+                    {errors.number && (
+                      <span className="text-danger">
+                        Please enter a valid phone number
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="form-control pt-4 d-flex flex-column border-0">
+                    <label htmlFor="subject" className="fw-bold">
+                      Subject
+                      <span className="text-danger px-1">&#42;</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      className="border border-secondary px-3 py-2 rounded"
+                      autoComplete="off"
+                      placeholder="Enter the subject"
+                      {...register("subject", { required: true })}
+                    />
+                    {errors.subject && (
+                      <span className="text-danger">
+                        Please enter a subject
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="form-control pt-4 d-flex flex-column border-0">
+                    <label htmlFor="message" className="fw-bold">
+                      Message
+                      <span className="text-danger px-1">&#42;</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      className="border border-secondary px-3 py-2 rounded"
+                      rows="10"
+                      cols="50"
+                      autoComplete="off"
+                      placeholder="Enter your message"
+                      {...register("message", { required: true })}
+                    />
+                    {errors.message && (
+                      <span className="text-danger">
+                        Please enter a message
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="form-control py-4 d-flex flex-column border-0">
+                    <button type="submit" className="form-button">
+                      Send Message
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>

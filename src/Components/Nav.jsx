@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useLocation } from "react-router-dom";
+import Logo from "../assets/icons/logo-transparent-bg-w.svg";
 
 const Navb = () => {
   const location = useLocation();
@@ -22,13 +23,12 @@ const Navb = () => {
           className="ms-lg-5"
           style={{
             fontWeight: 700,
+            width: "8rem",
             color: "#030637",
-            width: "6rem",
             padding: 0,
-            marginLeft: "1rem",
           }}
         >
-          Antrak Exports LLC
+          <img src={Logo} alt="logo" />
         </Nav.Link>
         <Navbar.Toggle
           aria-controls="offcanvasNavbar-expand-lg"

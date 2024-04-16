@@ -19,10 +19,6 @@ const About = () => {
     },
   };
 
-  const slideInVariants = {
-    hidden: { y: 100 },
-    visible: { y: 0 },
-  };
   return (
     <>
       <section>
@@ -54,45 +50,31 @@ const About = () => {
               </div>
 
               <div className="col-xl-6 col-md-12 col-sm-12 about-text">
-                <InView triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      exit={{ y: 100 }}
-                      variants={slideInVariants}
-                      transition={{ duration: 2, type: "fade", stiffness: 50 }}
-                    >
-                      <div className="pb-3 d-flex justify-content-center">
-                        <img src={Filter} alt="image" width={80} height={30} />
-                        <h4 className="h-100 fs-4 fw-bold">About Us</h4>
-                      </div>
-                      <p className="pb-3 text-center w-100">
-                        Antrak Export LLC serves as your comprehensive solution
-                        for all international shipping requirements. We offer a
-                        variety of services to businesses and individuals alike,
-                        from efficiently shipping any size cargo around the
-                        world to expertly handling the complexities of vehicles
-                        and car part exports and ensuring safe and
-                        cost-effective delivery of merchandise. We understand
-                        the challenges of international shipping and provide
-                        personalized service, expert guidance, and a commitment
-                        to excellence to make the process as smooth as possible.
-                        Our core values ensure efficiency, reliability, and
-                        competitive rates, while transparency and integrity
-                        build trust with every client. By choosing Antrak Export
-                        LLC, you can trust your shipment will reach its global
-                        destination securely and on-time.
-                      </p>
-                      <NavLink href="/about" className="text-decoration-none">
-                        <button type="button" className="about-submit" href="/">
-                          Read more
-                        </button>
-                      </NavLink>
-                    </motion.div>
-                  )}
-                </InView>
+                <div className="pb-3 d-flex justify-content-center">
+                  <img src={Filter} alt="image" width={80} height={30} />
+                  <h4 className="h-100 fs-4 fw-bold">About Us</h4>
+                </div>
+                <p className="pb-3 text-center w-100">
+                  Antrak Export LLC serves as your comprehensive solution for
+                  all international shipping requirements. We offer a variety of
+                  services to businesses and individuals alike, from efficiently
+                  shipping any size cargo around the world to expertly handling
+                  the complexities of vehicles and car part exports and ensuring
+                  safe and cost-effective delivery of merchandise. We understand
+                  the challenges of international shipping and provide
+                  personalized service, expert guidance, and a commitment to
+                  excellence to make the process as smooth as possible. Our core
+                  values ensure efficiency, reliability, and competitive rates,
+                  while transparency and integrity build trust with every
+                  client. By choosing Antrak Export LLC, you can trust your
+                  shipment will reach its global destination securely and
+                  on-time.
+                </p>
+                <NavLink href="/about" className="text-decoration-none">
+                  <button type="button" className="about-submit" href="/">
+                    Read more
+                  </button>
+                </NavLink>
               </div>
             </div>
           </div>
