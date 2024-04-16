@@ -29,7 +29,7 @@ const Form = () => {
         Subject: data.subject,
         Body: `
         <p>Hello Antrak Exports LLC,</p>
-<p>You got a new message from ${data.fullName}:</p>
+<p>You got a new message from ${data.fullName}</p>
 <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
   <strong>Name:</strong> ${data.fullName}
 </p>
@@ -45,10 +45,8 @@ const Form = () => {
         `,
       });
       toast.success("Email sent successfully!");
-      console.log(message);
       reset();
     } catch (error) {
-      console.error("Error sending email:", error);
       toast.error("Failed to send email. Please try again later.");
     }
   };

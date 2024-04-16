@@ -2,7 +2,7 @@ import ImageOne from "../../assets/images/watermark/about-loaction.png";
 import ImageTwo from "../../assets/images/watermark/about-image-2.png";
 import MainImage from "../../assets/images/others/about-image.png";
 import Filter from "../../assets/icons/filter.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-bootstrap";
 
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -85,11 +85,11 @@ const About = () => {
                         LLC, you can trust your shipment will reach its global
                         destination securely and on-time.
                       </p>
-                      <Link to="/about" className="text-decoration-none">
+                      <NavLink href="/about" className="text-decoration-none">
                         <button type="button" className="about-submit" href="/">
                           Read more
                         </button>
-                      </Link>
+                      </NavLink>
                     </motion.div>
                   )}
                 </InView>

@@ -8,7 +8,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Filter from "../assets/icons/filter.svg";
-import { Link } from "react-router-dom";
+import Link from "@mui/material/Link";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
 
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -32,7 +33,19 @@ const Faq = () => {
       <div className="hero-container">
         <div className="hero"></div>
         <div className="hero-text">
-          <h2>FAQs</h2>
+          <div className="text-container">
+            <h2>FAQs</h2>
+            <div role="presentation">
+              <Breadcrumbs aria-label="breadcrumb">
+                <Link color="inherit" href="/" className="fw-bold">
+                  Home
+                </Link>
+                <Link underline="none" color="inherit" href="/faq">
+                  FAQ
+                </Link>
+              </Breadcrumbs>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -61,9 +74,7 @@ const Faq = () => {
                     stiffness: 50,
                   }}
                 >
-                  <div className="py-3 px-3 w-100 border fw-bold">
-                    General
-                  </div>
+                  <div className="py-3 px-3 w-100 border fw-bold">General</div>
                   <Accordion
                     expanded={expanded === "panel1"}
                     onChange={handleChange("panel1")}
@@ -126,9 +137,7 @@ const Faq = () => {
                     stiffness: 50,
                   }}
                 >
-                  <div className="py-3 px-3 w-100 border fw-bold">
-                    Services
-                  </div>
+                  <div className="py-3 px-3 w-100 border fw-bold">Services</div>
                   <Accordion
                     expanded={expanded === "panel3"}
                     onChange={handleChange("panel3")}
@@ -209,9 +218,7 @@ const Faq = () => {
                     stiffness: 50,
                   }}
                 >
-                  <div className="py-3 px-3 w-100 border fw-bold">
-                    Delivery
-                  </div>
+                  <div className="py-3 px-3 w-100 border fw-bold">Delivery</div>
                   <Accordion
                     expanded={expanded === "panel6"}
                     onChange={handleChange("panel6")}
@@ -291,11 +298,12 @@ const Faq = () => {
                     <AccordionDetails>
                       <Typography>
                         You can contact us by filling out our online contact
-                        form, calling us at <Link to="tel:(941) -276-8532">
+                        form, calling us at{" "}
+                        <Link href="tel:(941) -276-8532">
                           <p className="">(941) -276-8532</p>
                         </Link>
                         or emailing us at{" "}
-                        <Link to="mailto:antrakexport@gmail.com">
+                        <Link href="mailto:antrakexport@gmail.com">
                           <p className="">antrakexport@gmail.com</p>
                         </Link>
                         Our friendly team is always happy to help!

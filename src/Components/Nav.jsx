@@ -2,8 +2,10 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useLocation } from "react-router-dom";
 
 const Navb = () => {
+  const location = useLocation();
   return (
     <>
       <Navbar
@@ -60,16 +62,36 @@ const Navb = () => {
           <Offcanvas.Body>
             <Container fluid className="container">
               <Nav className="justify-content-end flex-grow-1">
-                <Nav.Link href="/" className="pe-md-5">
+                <Nav.Link
+                  href="/"
+                  className={`nav-link me-md-5 ${
+                    location.pathname === "/" ? "active" : ""
+                  }`}
+                >
                   Home
                 </Nav.Link>
-                <Nav.Link href="/about" className="pe-md-5 ">
+                <Nav.Link
+                  href="/about"
+                  className={`nav-link me-md-5 ${
+                    location.pathname === "/about" ? "active" : ""
+                  }`}
+                >
                   About
                 </Nav.Link>
-                <Nav.Link href="/services" className="pe-md-5">
+                <Nav.Link
+                  href="/services"
+                  className={`nav-link me-md-5 ${
+                    location.pathname === "/services" ? "active" : ""
+                  }`}
+                >
                   Services
                 </Nav.Link>
-                <Nav.Link href="/contact" className="pe-md-5">
+                <Nav.Link
+                  href="/contact"
+                  className={`nav-link me-md-5 ${
+                    location.pathname === "/contact" ? "active" : ""
+                  }`}
+                >
                   Contact
                 </Nav.Link>
               </Nav>

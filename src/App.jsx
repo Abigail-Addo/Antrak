@@ -2,14 +2,19 @@ import "./assets/css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import { Outlet } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+
+import Routes from "./routes";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <AnimatePresence wait>
-        <Outlet />
+        <>
+          <Routes />
+          <Outlet />
+        </>
       </AnimatePresence>
     </>
   );

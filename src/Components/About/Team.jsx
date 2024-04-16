@@ -1,6 +1,5 @@
 import Filter from "../../assets/icons/filter.svg";
 import Team01 from "../../assets/images/others/team01.jpg";
-import Team02 from "../../assets/images/others/team02.jpg";
 import { Link } from "react-router-dom";
 import Facebook from "../../assets/icons/facebook.svg";
 import Instagram from "../../assets/icons/instagram.svg";
@@ -52,7 +51,7 @@ const Team = () => {
                         <div className="card-body">
                           <div className="d-flex justify-content-between">
                             <div>
-                              <h5 className="card-title">Card title</h5>
+                              <h5 className="card-title">Salia Mohammed</h5>
                               <p className="card-text p-0 m-0">Manager</p>
                             </div>
                             <div className="d-flex flex-column social-icons">
@@ -105,14 +104,14 @@ const Team = () => {
                     >
                       <div className="card mb-5 border-0">
                         <img
-                          src={Team02}
+                          src={Team01}
                           className="card-img-top"
                           alt="image"
                         />
                         <div className="card-body">
                           <div className="d-flex justify-content-between">
                             <div>
-                              <h5 className="card-title">Card title</h5>
+                              <h5 className="card-title">Salia Mohammed</h5>
                               <p className="card-text p-0 m-0">
                                 Procurement Manager
                               </p>
@@ -174,7 +173,7 @@ const Team = () => {
                         <div className="card-body">
                           <div className="d-flex justify-content-between">
                             <div>
-                              <h5 className="card-title">Card title</h5>
+                              <h5 className="card-title">Salia Mohammed</h5>
                               <p className="card-text p-0 m-0">
                                 Marketing Manager
                               </p>
@@ -229,14 +228,14 @@ const Team = () => {
                     >
                       <div className="card border-0">
                         <img
-                          src={Team02}
+                          src={Team01}
                           className="card-img-top"
                           alt="image"
                         />
                         <div className="card-body">
                           <div className="d-flex justify-content-between">
                             <div>
-                              <h5 className="card-title">Card title</h5>
+                              <h5 className="card-title">Salia Mohammed</h5>
                               <p className="card-text p-0 m-0">
                                 Warehouse Manager
                               </p>
