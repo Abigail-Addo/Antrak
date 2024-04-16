@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Filter from "../../assets/icons/filter.svg";
-// import Service from "../../assets/images/service02.jpg";
 import Cargo1 from "../../assets/images/services/service01.webp";
 import Cargo2 from "../../assets/images/services/service03.webp";
 import Cargo3 from "../../assets/images/services/vehicle-shipping.jpg";
