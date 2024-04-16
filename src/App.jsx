@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { AnimatePresence } from "framer-motion";
 
-import Routes from "./routes";
+import Routes from "./Router/routes";
 import { Outlet } from "react-router-dom";
 
 function App() {
