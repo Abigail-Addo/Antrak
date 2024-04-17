@@ -34,6 +34,8 @@ const Carousel = ({ slides }) => {
             key={index}
             src={`${slides[index].url}`}
             alt={`${slides[index].title}`}
+            width="100%"
+            height="100%"
           />
         </div>
         <div className="carousel-text">

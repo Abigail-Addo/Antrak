@@ -34,13 +34,16 @@ const Footer = () => {
                 </p>
                 <div className="h-100 w-100 social-container">
                   <p className="py-0 my-0 font-italic">Follow us on</p>
-                  <Link to="/">
+                  <Link
+                    to="https://web.facebook.com/?_rdc=1&_rdr"
+                    target="_blank"
+                  >
                     <img src={Facebook} alt="facebook" className="social" />
                   </Link>
-                  <Link to="/">
+                  <Link to="https://www.instagram.com/" target="_blank">
                     <img src={Instagram} alt="instagram" className="social" />
                   </Link>
-                  <Link to="/">
+                  <Link to="https://twitter.com/?lang=en" target="_blank">
                     <img src={Twitter} alt="twitter" className="social" />
                   </Link>
                 </div>
@@ -117,46 +120,79 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-xl-4">
+              <div className="col-xl-4 footer-image">
                 <div className="row">
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img src={ImageOne} alt="image" className=" w-100 h-100" />
+                    <img
+                      src={ImageOne}
+                      alt="image"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img src={ImageTwo} alt="image" className=" w-100 h-100" />
+                    <img
+                      src={ImageTwo}
+                      alt="image"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
                     <img
                       src={ImageThree}
                       alt="image"
-                      className=" w-100 h-100"
+                      width="100%"
+                      height="100%"
                     />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img src={ImageFour} alt="image" className=" w-100 h-100" />
+                    <img
+                      src={ImageFour}
+                      alt="image"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img src={ImageFive} alt="image" className=" w-100 h-100" />
+                    <img
+                      src={ImageFive}
+                      alt="image"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img src={ImageSix} alt="image" className=" w-100 h-100" />
+                    <img
+                      src={ImageSix}
+                      alt="image"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
                     <img
                       src={ImageSeven}
                       alt="image"
-                      className=" w-100 h-100"
+                      width="100%"
+                      height="100%"
                     />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
                     <img
                       src={ImageEight}
                       alt="image"
-                      className=" w-100 h-100"
+                      width="100%"
+                      height="100%"
                     />
                   </div>
                   <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img src={ImageNine} alt="image" className=" w-100 h-100" />
+                    <img
+                      src={ImageNine}
+                      alt="image"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                 </div>
               </div>

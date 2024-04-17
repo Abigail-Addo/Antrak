@@ -23,12 +23,12 @@ const Navb = () => {
           className="ms-lg-5"
           style={{
             fontWeight: 700,
-            width: "8rem",
             color: "#030637",
+            width:"8rem",
             padding: 0,
           }}
         >
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" width="100%" height="4%"/>
         </Nav.Link>
         <Navbar.Toggle
           aria-controls="offcanvasNavbar-expand-lg"

@@ -99,6 +99,8 @@ const Sector = () => {
                           <img
                             src={MainImage}
                             alt="image"
+                            width="100%"
+                            height="100%"
                             className="main-image d-flex my-auto rounded mb-3"
                           />
                         </div>

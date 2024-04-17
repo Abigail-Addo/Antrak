@@ -52,11 +52,13 @@ const Services = () => {
                               src={Cargo2}
                               className="img-fluid"
                               alt="car"
+                              width="100%"
+                              height="100%"
                             />
                           </div>
                           <div className="col-md-8">
                             <div className="card-body h-100">
-                              <h5 className="card-title fw-bold">
+                              <h5 className="card-title">
                                 Global Shipping
                               </h5>
                               <p className="card-text">
@@ -89,11 +91,13 @@ const Services = () => {
                               src={Cargo3}
                               className="img-fluid"
                               alt="car"
+                              width="100%"
+                              height="100%"
                             />
                           </div>
                           <div className="col-md-8">
                             <div className="card-body h-100">
-                              <h5 className="card-title fw-bold">
+                              <h5 className="card-title ">
                                 Vehicle Shipping
                               </h5>
                               <p className="card-text">
@@ -129,11 +133,13 @@ const Services = () => {
                               src={Cargo4}
                               className="img-fluid"
                               alt="car"
+                              width="100%"
+                              height="100%"
                             />
                           </div>
                           <div className="col-md-8">
                             <div className="card-body h-100">
-                              <h5 className="card-title fw-bold">
+                              <h5 className="card-title">
                                 Car Parts Shipping
                               </h5>
                               <p className="card-text">
@@ -165,11 +171,13 @@ const Services = () => {
                               src={Cargo1}
                               className="img-fluid"
                               alt="car"
+                              width="100%"
+                              height="100%"
                             />
                           </div>
                           <div className="col-md-8">
                             <div className="card-body h-100">
-                              <h5 className="card-title fw-bold">
+                              <h5 className="card-title">
                                 Merchandise Shipping
                               </h5>
                               <p className="card-text">

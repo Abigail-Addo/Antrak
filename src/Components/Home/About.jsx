@@ -49,7 +49,7 @@ const About = () => {
                 </InView>
               </div>
 
-              <div className="col-xl-6 col-md-12 col-sm-12 about-text">
+              <div className="col-xl-6 col-md-12 col-sm-12">
                 <div className="pb-3 d-flex justify-content-center">
                   <img src={Filter} alt="image" width={80} height={30} />
                   <h4 className="h-100 fs-4 fw-bold">About Us</h4>

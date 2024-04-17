@@ -50,13 +50,13 @@ const Header = () => {
         <div className="d-flex shape-wrapper-rotate h-100">
           <div className="trapezium text-white">
             <div className="h-100 w-50 text-break ms-5 d-flex align-items-center">
-              <Link to="/">
+              <Link to="https://www.instagram.com/" target="_blank">
                 <img src={Instagram} alt="instagram" className="icon" />
               </Link>
-              <Link to="/">
+              <Link to="https://twitter.com/?lang=en" target="_blank">
                 <img src={Twitter} alt="twitter" className="icon" />
               </Link>
-              <Link to="/">
+              <Link to="https://web.facebook.com/?_rdc=1&_rdr" target="_blank">
                 <img src={Facebook} alt="facebook" className="icon" />
               </Link>
             </div>
