@@ -1,50 +1,19 @@
-import Filter from "../../assets/icons/filter.svg";
 import Image from "../../assets/images/others/service01.jpg";
 
-import { InView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-
 const Values = () => {
-  const fadeInVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <>
       <section className="values">
         <div className="container wrapper">
           <div className="py-5">
             <div className=" pb-5 d-flex justify-content-center">
-              <img src={Filter} alt="image" width={80} height={30} />
               <h4 className="h-100 fs-4 fw-bold">Our Core Values</h4>
             </div>
             <div className="row">
               <div className="col-lg-6 col-md-12 col-xs-12 pb-5">
-                <InView threshold={0.3} triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      variants={fadeInVariants}
-                    >
-                      <div className="image">
-                        <img
-                          src={Image}
-                          alt="image"
-                          className="image w-100 h-100"
-                        />
-                      </div>
-                    </motion.div>
-                  )}
-                </InView>
+                <div className="image">
+                  <img src={Image} alt="image" className="image w-100 h-100" />
+                </div>
               </div>
               <div className="col-lg-6 col-md-12 col-xs-12 values-col">
                 <div className="row">

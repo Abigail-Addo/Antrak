@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import Filter from "../../assets/icons/filter.svg";
 import Cargo1 from "../../assets/images/services/service01.webp";
 import Cargo2 from "../../assets/images/services/service03.webp";
 import Cargo3 from "../../assets/images/services/vehicle-shipping.jpg";
@@ -37,7 +36,6 @@ const Service01 = () => {
                 {selectedItem === "#global-shipping" && (
                   <>
                     <div className="pb-3 d-flex">
-                      <img src={Filter} alt="image" width={80} height={30} />
                       <h4 className="h-100 fs-4 fw-bold">Global Shipping</h4>
                     </div>
 
@@ -104,7 +102,6 @@ const Service01 = () => {
                 {selectedItem === "#vehicle-shipping" && (
                   <>
                     <div className="pb-3 d-flex">
-                      <img src={Filter} alt="image" width={80} height={30} />
                       <h4 className="h-100 fs-4 fw-bold">Vehicle Shipping</h4>
                     </div>
 
@@ -164,7 +161,6 @@ const Service01 = () => {
                 {selectedItem === "#car-parts-shipping" && (
                   <>
                     <div className="pb-3 d-flex">
-                      <img src={Filter} alt="image" width={80} height={30} />
                       <h4 className="h-100 fs-4 fw-bold">Car Parts Shipping</h4>
                     </div>
 
@@ -229,7 +225,6 @@ const Service01 = () => {
                 {selectedItem === "#merchandise-shipping" && (
                   <>
                     <div className="pb-3 d-flex">
-                      <img src={Filter} alt="image" width={80} height={30} />
                       <h4 className="h-100 fs-4 fw-bold">
                         Merchandise Shipping
                       </h4>
@@ -289,7 +284,9 @@ const Service01 = () => {
                 )}
               </div>
               <div className="col-lg-4 col-xs-12 other-services">
-                <h5>Other Services</h5>
+                <div className="pb-3 d-flex">
+                  <h4 className="h-100 fs-4 fw-bold">Other Services</h4>
+                </div>
                 <ListGroup
                   defaultActiveKey="#global-shipping"
                   onSelect={handleItemClick}

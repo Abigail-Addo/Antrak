@@ -15,7 +15,7 @@ const Header = () => {
           <div className="trapezium">
             <div className="ms-5">
               <Link to="/">
-                <img src={Logo} alt="logo" />
+                <img src={Logo} alt="logo" width="80%" height="70%" />
               </Link>
             </div>
           </div>

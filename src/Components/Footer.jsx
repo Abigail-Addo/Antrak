@@ -1,12 +1,3 @@
-import ImageOne from "../assets/images/footer/01.webp";
-import ImageTwo from "../assets/images/footer/02.webp";
-import ImageThree from "../assets/images/footer/03.webp";
-import ImageFour from "../assets/images/footer/04.webp";
-import ImageFive from "../assets/images/footer/05.webp";
-import ImageSix from "../assets/images/footer/06.webp";
-import ImageSeven from "../assets/images/footer/07.webp";
-import ImageEight from "../assets/images/footer/08.webp";
-import ImageNine from "../assets/images/footer/09.webp";
 import { Link } from "react-router-dom";
 import Facebook from "../assets/icons/facebook.svg";
 import Instagram from "../assets/icons/instagram.svg";
@@ -20,11 +11,11 @@ const Footer = () => {
     <>
       <footer>
         <div className="container wrapper text-white">
-          <div className="py-5">
-            <div className="row h-100">
-              <div className="col-xl-4 pb-4">
+          <div className="pt-5">
+            <div className="row h-100 border-bottom">
+              <div className="col-xl-6 pb-4">
                 <div className="w-50">
-                  <img src={Logo} alt="logo" />
+                  <img src={Logo} alt="logo" width="100%" height="100%" />
                 </div>
                 <p>
                   At Antrak Export LLC, we are passionate about connecting you
@@ -48,153 +39,73 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-xl-4 d-flex flex-column">
-                <div className="row">
-                  <div className="col-md-4 col-lg-4">
-                    <div>
-                      <h5 className="text-decoration-underline text-white p-0 m-0">
-                        Quick Links
-                      </h5>
-                    </div>
-                    <div>
-                      <NavLink
-                        href="/"
-                        className="text-decoration-none text-white"
-                      >
-                        Home
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        href="/about"
-                        className="text-decoration-none text-white"
-                      >
-                        About
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        href="/services"
-                        className="text-decoration-none text-white"
-                      >
-                        Services
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        href="/contact"
-                        className="text-decoration-none text-white"
-                      >
-                        Contact
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        href="/gallery"
-                        className="text-decoration-none text-white"
-                      >
-                        Gallery
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        href="/faq"
-                        className="text-decoration-none text-white"
-                      >
-                        FAQs
-                      </NavLink>
-                    </div>
-                  </div>
-                  <div className="col-md-8 col-lg-8">
-                    <h5 className="text-decoration-underline text-white">
-                      Working Hours
-                    </h5>
-                    <p className="links">
-                      We are only open for business on weekdays
-                    </p>
-                    <div className="d-flex w-100">
-                      <p>Mon - Fri:</p>
-                      <p className="mx-4">8am - 5pm</p>
-                    </div>
-                  </div>
+              <div className="col-xl-3 d-flex flex-column pb-4">
+                <div>
+                  <h5 className="fw-bold text-white p-0 m-0">Quick Links</h5>
+                </div>
+                <div>
+                  <NavLink href="/" className="text-decoration-none text-white">
+                    Home
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink
+                    href="/about"
+                    className="text-decoration-none text-white"
+                  >
+                    About
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink
+                    href="/services"
+                    className="text-decoration-none text-white"
+                  >
+                    Services
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink
+                    href="/contact"
+                    className="text-decoration-none text-white"
+                  >
+                    Contact
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink
+                    href="/gallery"
+                    className="text-decoration-none text-white"
+                  >
+                    Gallery
+                  </NavLink>
                 </div>
               </div>
-
-              <div className="col-xl-4 footer-image">
-                <div className="row">
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageOne}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageTwo}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageThree}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageFour}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageFive}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageSix}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageSeven}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageEight}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <div className="col-4 col-md-3 col-xl-4 mb-3">
-                    <img
-                      src={ImageNine}
-                      alt="image"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
+              <div className="col-xl-3 d-flex flex-column">
+                <div>
+                  <h5 className="fw-bold text-white p-0 m-0">Support</h5>
                 </div>
+                <div>
+                  <NavLink
+                    href="/faq"
+                    className="text-decoration-none text-white"
+                  >
+                    Frequently Asked Questions
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink
+                    href="/privacy-policy"
+                    className="text-decoration-none text-white"
+                  >
+                    Privacy Policy
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12 text-center py-4">
+                <p>Copyright © 2024 Antrak Export LLC. All rights reserved.</p>
               </div>
             </div>
           </div>

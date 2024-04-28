@@ -7,7 +7,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Filter from "../assets/icons/filter.svg";
 import Link from "@mui/material/Link";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 
@@ -47,7 +46,6 @@ const Faq = () => {
         <div className="wrapper container">
           <div className="py-5">
             <div className="pb-2 d-flex justify-content-center">
-              <img src={Filter} alt="image" width={80} height={30} />
               <h4 className="h-100 fs-4 fw-bold">Frequently Asked Questions</h4>
             </div>
             <p className="text-center fs-5 pb-4">

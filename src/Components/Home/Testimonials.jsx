@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Filter from "../../assets/icons/filter-white.svg";
 import Left from "../../assets/icons/arrow-left.svg";
 import Right from "../../assets/icons/arrow-right.svg";
 import { useState, useEffect } from "react";
@@ -15,9 +14,9 @@ const Testimonials = ({ testimonials }) => {
     } else {
       setIndex(index - 1);
     }
-    setAnimation(true); 
+    setAnimation(true);
   };
-  
+
   const goNext = () => {
     const isLastSlide = index === testimonials.length - 1;
     if (isLastSlide) {
@@ -50,12 +49,16 @@ const Testimonials = ({ testimonials }) => {
         <div className="container wrapper">
           <div className="py-5">
             <div className="pb-5 d-flex justify-content-center">
-              <img src={Filter} alt="image" width={80} height={30} />
               <h4 className="h-100 fs-4 fw-bold text-white">
                 Our Clients Says
               </h4>
             </div>
-            <div className={`row d-flex justify-content-center testimonial-text slide ${animation ? 'slide-in' : ''}`} onAnimationEnd={handleAnimation}>
+            <div
+              className={`row d-flex justify-content-center testimonial-text slide ${
+                animation ? "slide-in" : ""
+              }`}
+              onAnimationEnd={handleAnimation}
+            >
               <div className="col-xl-8 col-sm-12 h-100">
                 <p className="fst-italic text-center text-white">
                   {testimonials[index].text}

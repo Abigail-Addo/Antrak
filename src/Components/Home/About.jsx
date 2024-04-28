@@ -1,24 +1,9 @@
 import ImageOne from "../../assets/images/watermark/about-loaction.png";
 import ImageTwo from "../../assets/images/watermark/about-image-2.png";
 import MainImage from "../../assets/images/others/about-image.png";
-import Filter from "../../assets/icons/filter.svg";
 import { NavLink } from "react-bootstrap";
 
-import { InView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-
 const About = () => {
-  const fadeInVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <>
       <section>
@@ -31,27 +16,15 @@ const About = () => {
 
             <div className="row m-0 p-0 about w-100 h-100">
               <div className="col-xl-6 col-md-8 col-sm-12">
-                <InView threshold={0.3} triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      variants={fadeInVariants}
-                    >
-                      <img
-                        src={MainImage}
-                        alt="image"
-                        className="d-flex mx-auto pb-5 w-100 h-auto"
-                      />
-                    </motion.div>
-                  )}
-                </InView>
+                <img
+                  src={MainImage}
+                  alt="image"
+                  className="d-flex mx-auto pb-5 w-100 h-auto"
+                />
               </div>
 
               <div className="col-xl-6 col-md-12 col-sm-12">
                 <div className="pb-3 d-flex justify-content-center">
-                  <img src={Filter} alt="image" width={80} height={30} />
                   <h4 className="h-100 fs-4 fw-bold">About Us</h4>
                 </div>
                 <p className="pb-3 text-center w-100">

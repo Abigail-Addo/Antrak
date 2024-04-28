@@ -7,11 +7,11 @@ import Sector from "../Components/Home/Sector";
 import Counter from "../Components/Home/Counter";
 import Testimonials from "../Components/Home/Testimonials";
 import Footer from "../Components/Footer";
-import images from "../Data/images.json";
+// import images from "../Data/images.json";
 import data from "../Data/testimonials.json";
 
 const Home = () => {
-  const slides = images.slides;
+  // const slides = images.slides;
   const testimonials = data.testimonials;
 
   return (
@@ -20,7 +20,7 @@ const Home = () => {
 
       <Navbar />
 
-      <Carousel slides={slides} />
+      <Carousel />
 
       <About />
 

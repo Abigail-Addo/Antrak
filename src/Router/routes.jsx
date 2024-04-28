@@ -11,6 +11,7 @@ import Contact from "../Pages/Contact";
 import Services from "../Pages/Services";
 import FAQ from "../Pages/Faq";
 import Gallery from "../Pages/Gallery";
+import Privacy from "../Pages/Privacy";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="/contact" element={<Contact />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/gallery" element={<Gallery />} />
+      <Route path="/privacy-policy" element={<Privacy />} />
     </Route>
   )
 );

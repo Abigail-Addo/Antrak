@@ -1,25 +1,10 @@
-import Image from "../../assets/images/gallery/image21.jpeg";
+import Image from "../../assets/images/others/contact.jpg";
 import Location from "../../assets/icons/location-contact.svg";
 import Phone from "../../assets/icons/phone-contact.svg";
-import Filter from "../../assets/icons/filter.svg";
 import Email from "../../assets/icons/message-contact.svg";
 import { Link } from "react-router-dom";
 
-import { InView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-
 const Details = () => {
-  const fadeInVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <>
       <section className="bg-white details">
@@ -28,7 +13,6 @@ const Details = () => {
             <div className="row pt-5 p-0 m-0">
               <div className="col-lg-6 col-xs-12">
                 <div className="pb-5 d-flex">
-                  <img src={Filter} alt="image" width={80} height={30} />
                   <h4 className="h-100 fs-4 fw-bold">Get In Touch</h4>
                 </div>
                 <p className="text-justify pb-4 border-bottom">
@@ -85,59 +69,15 @@ const Details = () => {
                     <p className="p-0 m-0">antrakexport@gmail.com</p>
                   </Link>
                 </div>
-
-                <div className="pb-3 pt-4 d-flex">
-                  <img src={Filter} alt="image" width={80} height={30} />
-                  <h4 className="h-100 fs-4 fw-bold">Operational Hours</h4>
-                </div>
-                <div className="d-flex py-2">
-                  <p className="p-0 m-0 w-25">Monday</p>
-                  <p className="p-0 m-0 ps-5">8am - 5pm</p>
-                </div>
-                <div className="d-flex py-2">
-                  <p className="p-0 m-0 w-25">Tuesday</p>
-                  <p className="p-0 m-0 ps-5">8am - 5pm</p>
-                </div>
-                <div className="d-flex py-2">
-                  <p className="p-0 m-0 w-25">Wednesday</p>
-                  <p className="p-0 m-0 ps-5">8am - 5pm</p>
-                </div>
-                <div className="d-flex py-2">
-                  <p className="p-0 m-0 w-25">Thursday</p>
-                  <p className="p-0 m-0 ps-5">8am - 5pm</p>
-                </div>
-                <div className="d-flex py-2">
-                  <p className="p-0 m-0 w-25">Friday</p>
-                  <p className="p-0 m-0 ps-5">8am - 5pm</p>
-                </div>
-                <div className="d-flex py-2">
-                  <p className="p-0 m-0 w-25">Saturday</p>
-                  <p className="p-0 m-0 ps-5">CLOSED</p>
-                </div>
-                <div className="d-flex pt-2 pb-5">
-                  <p className="p-0 m-0 w-25">Sunday</p>
-                  <p className="p-0 m-0 ps-5">CLOSED</p>
-                </div>
               </div>
               <div className="col-lg-6 col-xs-12">
-                <InView threshold={0.3} triggerOnce>
-                  {({ inView, ref }) => (
-                    <motion.div
-                      ref={ref}
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      variants={fadeInVariants}
-                    >
-                      <div className="image">
-                        <img
-                          src={Image}
-                          alt="image"
-                          className="image w-100 h-100"
-                        />
-                      </div>
-                    </motion.div>
-                  )}
-                </InView>
+                <div className="w-100 h-100">
+                  <img
+                    src={Image}
+                    alt="image"
+                    className="w-100 h-100"
+                  />
+                </div>
               </div>
             </div>
           </div>

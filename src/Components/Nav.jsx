@@ -24,11 +24,11 @@ const Navb = () => {
           style={{
             fontWeight: 700,
             color: "#030637",
-            width:"8rem",
+            width: "8rem",
             padding: 0,
           }}
         >
-          <img src={Logo} alt="logo" width="100%" height="4%"/>
+          <img src={Logo} alt="logo" width="100%" height="4%" />
         </Nav.Link>
         <Navbar.Toggle
           aria-controls="offcanvasNavbar-expand-lg"
@@ -64,11 +64,11 @@ const Navb = () => {
               <Nav className="justify-content-end flex-grow-1">
                 <Nav.Link
                   href="/"
-                  className={`nav-link me-md-5 ${
+                  className={`offcanvas-navbar nav-link me-md-5 ${
                     location.pathname === "/" ? "active" : ""
                   }`}
                 >
-                  Home
+                  <div className="nav-item">Home</div>
                 </Nav.Link>
                 <Nav.Link
                   href="/about"
@@ -76,7 +76,7 @@ const Navb = () => {
                     location.pathname === "/about" ? "active" : ""
                   }`}
                 >
-                  About
+                  <div className="nav-item">About</div>
                 </Nav.Link>
                 <Nav.Link
                   href="/services"
@@ -84,7 +84,7 @@ const Navb = () => {
                     location.pathname === "/services" ? "active" : ""
                   }`}
                 >
-                  Services
+                  <div className="nav-item">Services</div>
                 </Nav.Link>
                 <Nav.Link
                   href="/contact"
@@ -92,7 +92,7 @@ const Navb = () => {
                     location.pathname === "/contact" ? "active" : ""
                   }`}
                 >
-                  Contact
+                  <div className="nav-item">Contact</div>
                 </Nav.Link>
               </Nav>
             </Container>

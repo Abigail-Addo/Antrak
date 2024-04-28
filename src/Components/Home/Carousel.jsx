@@ -1,48 +1,21 @@
-/* eslint-disable react/prop-types */
 import Typewriter from "typewriter-effect";
-import { useState, useEffect } from "react";
+import CarouselImage from "../../assets/images/carousel/ezgif.com-animated-gif-maker.gif"
 
-const Carousel = ({ slides }) => {
-  const [index, setIndex] = useState(0);
-
-  const goNext = () => {
-    const isLastSlide = index === slides.length - 1;
-    if (isLastSlide) {
-      setIndex(0);
-    } else {
-      setIndex(index + 1);
-    }
-  };
-
-  const autoSlide = () => {
-    goNext();
-  };
-
-  useEffect(() => {
-    const interval = setInterval(autoSlide, 7000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  });
+const Carousel = () => {
 
   return (
     <>
       <div className="carousel-container">
         <div className="carousel">
-          <img
-            key={index}
-            src={`${slides[index].url}`}
-            alt={`${slides[index].title}`}
-            width="100%"
-            height="100%"
-          />
+          <img src={CarouselImage} alt="carousel"/>
         </div>
         <div className="carousel-text">
           <div>
             <Typewriter
               options={{
-                strings: ["Your Trusted Partner For Smooth International Shipping"],
+                strings: [
+                  "Your Trusted Partner For Smooth International Shipping",
+                ],
                 autoStart: true,
                 loop: false,
                 deleteSpeed: Infinity,
